@@ -1,7 +1,9 @@
 package testClasses;
 
-import org.testng.Assert; 
+import org.testng.Assert;   
 import org.testng.annotations.Test;
+
+import baseClass.BaseClass;
 import pageClasses.HomePageClass;
 import pageClasses.LoginPageClass;
 import pageClasses.ResetPasswordPageClass;
@@ -53,13 +55,14 @@ public class LoginTest extends BaseClass {
 	@Test
 	public void verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password() {
 		lp =new LoginPageClass(driver);
-		lp.clickForgotPasswordBtn();
-		rp = new ResetPasswordPageClass(driver);
+		rp = lp.clickForgotPasswordBtn();
 		String actualResult = rp.getResetPasswordPageURL();
 		Assert.assertEquals(actualResult, "https://qalegend.com/billing/public/password/reset");
 		String actualHeading = rp.getTextOfResetPasswordHeading();
 		Assert.assertEquals(actualHeading, "Reset Password");
 	}
+	
+
 	
 	
 	

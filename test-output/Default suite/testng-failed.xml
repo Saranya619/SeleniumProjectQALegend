@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="baseClass.LoginTest">
+      <class name="testClasses.HomeTest">
         <methods>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password"/>
+          <include name="verify_tooltip_of_calculator_icon"/>
         </methods>
-      </class> <!-- baseClass.LoginTest -->
+      </class> <!-- testClasses.HomeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
