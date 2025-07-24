@@ -1,0 +1,14 @@
+# Maven build output
+/target/
+
+# TestNG output
+/test-output/
+
+# Eclipse project files
+.classpath
+.project
+.settings/
+
+# OS-specific files
+.DS_Store        # macOS
+Thumbs.db        # Windows

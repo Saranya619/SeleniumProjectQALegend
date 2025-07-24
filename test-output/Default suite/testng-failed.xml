@@ -7,7 +7,7 @@
         <methods>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="verify_UserNameTextBox_Showing_Hint_or_not"/>
+          <include name="verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password"/>
         </methods>
       </class> <!-- baseClass.LoginTest -->
     </classes>

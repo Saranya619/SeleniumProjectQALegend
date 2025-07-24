@@ -1,14 +1,15 @@
 package baseClass;
 
-import org.testng.Assert;
+import org.testng.Assert; 
 import org.testng.annotations.Test;
-
 import pageClasses.HomePageClass;
 import pageClasses.LoginPageClass;
+import pageClasses.ResetPasswordPageClass;
 
 public class LoginTest extends BaseClass {
 	LoginPageClass lp;
 	HomePageClass hp;
+	ResetPasswordPageClass rp;
 
 	@Test
 	public void verify_valid_login() {
@@ -34,4 +35,32 @@ public class LoginTest extends BaseClass {
 		Assert.assertEquals(actualResult,true);
 	
 	}
+	
+	@Test
+	public void  verify_Correct_Application_Is_Launching_While_Hitting_The_URL() {
+		lp = new LoginPageClass(driver);
+		String actualResult = lp.getApplicationURL();
+		Assert.assertEquals(actualResult, "https://qalegend.com/billing/public/login");
+	}
+	
+	@Test
+	public  void verify_the_RememberMe_checkbox_is_unchecked_by_default () {
+		lp =new LoginPageClass(driver);
+		boolean actualResult = lp.isRememberMeChecked();
+		Assert.assertFalse(actualResult);
+	}
+	
+	@Test
+	public void verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password() {
+		lp =new LoginPageClass(driver);
+		lp.clickForgotPasswordBtn();
+		rp = new ResetPasswordPageClass(driver);
+		String actualResult = rp.getResetPasswordPageURL();
+		Assert.assertEquals(actualResult, "https://qalegend.com/billing/public/password/reset");
+		String actualHeading = rp.getTextOfResetPasswordHeading();
+		Assert.assertEquals(actualHeading, "Reset Password");
+	}
+	
+	
+	
 }

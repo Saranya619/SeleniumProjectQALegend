@@ -16,21 +16,24 @@ public class GeneralUtilities {
 		return attributeName;
 	}
 
+	// Element displayed
 	public boolean is_element_displayed(WebElement element) {
 		boolean statusOfWebElement = element.isDisplayed();
 		return statusOfWebElement;
 	}
 
-	// HomeWork
+	// Element enabled
 	public boolean is_element_enabled(WebElement element) {
 		boolean statusOfWebElement = element.isEnabled();
 		return statusOfWebElement;
 	}
 
+	// Element selected
 	public boolean is_element_selected(WebElement element) {
 		boolean statusOfWebElement = element.isSelected();
 		return statusOfWebElement;
 	}
+	
 
 	public boolean is_multiple_dropdown(WebElement dropdownElement) {
 		Select sel = new Select(dropdownElement);
@@ -44,31 +47,31 @@ public class GeneralUtilities {
 		select.selectByIndex(index);
 	}
 
-	// HomeWork - select by value
+	// select by value
 	public void select_Option_From_Dropdown_Using_Value(WebElement element, String value) {
 		Select select = new Select(element);
 		select.selectByValue(value);
 	}
 
-	// HomeWork - select by visibleText
+	// select by visibleText
 	public void select_Option_From_Dropdown_Using_VisibleText(WebElement element, String Text) {
 		Select select = new Select(element);
 		select.selectByVisibleText(Text);
 	}
-	
-	//HomeWork - Deselect all
-	public void deselect_all_options(WebElement element ) {
+
+	// Deselect all
+	public void deselect_all_options(WebElement element) {
 		Select sel = new Select(element);
 		sel.deselectAll();
 	}
-	
-	//HomeWork - Deselect by index
-	public void deselect_by_index(WebElement element,int index) {
+
+	// Deselect by index
+	public void deselect_by_index(WebElement element, int index) {
 		Select sel = new Select(element);
 		sel.deselectByIndex(index);
 	}
 
-	//All options from dropdown
+	// Get All options from dropdown
 	public List<String> getAllOptions_From_Dropdown(WebElement element) {
 		Select select = new Select(element);
 		return select.getOptions().stream().map(WebElement::getText).collect(Collectors.toList());
@@ -90,7 +93,6 @@ public class GeneralUtilities {
 		return texts;
 	}
 
-	
 	// File upload
 	public void file_Upload(WebElement element, String filePath) {
 		element.sendKeys(filePath);
@@ -123,8 +125,8 @@ public class GeneralUtilities {
 	public void alert_Dismiss(WebDriver driver) {
 		driver.switchTo().alert().dismiss();
 	}
-	
-	//HomeWork - Get Text of alert message
+
+	// HomeWork - Get Text of alert message
 	public String get_Text_of_alert_Message(WebDriver driver) {
 		return driver.switchTo().alert().getText();
 	}

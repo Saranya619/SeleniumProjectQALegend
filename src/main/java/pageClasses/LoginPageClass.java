@@ -28,6 +28,12 @@ public class LoginPageClass {
 	@FindBy(xpath = "//*//strong[contains(text(),\"These credentials\")]")
 	WebElement invalidErrorMsg;
 	
+	@FindBy(name="remember")
+	WebElement rememberMeCheckbox;
+	
+	@FindBy(xpath="//a[@href='https://qalegend.com/billing/public/password/reset']")
+	WebElement forgotPasswordBtn;
+	
 	public HomePageClass validLogin(String uname,String pwd) {
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
@@ -51,4 +57,19 @@ public class LoginPageClass {
 		String attributeValue  = gl.get_attribute_of_element(username, attribute);
 		return attributeValue;
 	}
+	
+	public String getApplicationURL() {
+		return driver.getCurrentUrl();
+	}
+	
+	public boolean isRememberMeChecked() {
+		return gl.is_element_selected(rememberMeCheckbox);
+	}
+	
+	public ResetPasswordPageClass clickForgotPasswordBtn() {
+		forgotPasswordBtn.click();
+		return new ResetPasswordPageClass(driver);
+	}
+	
+	
 }
