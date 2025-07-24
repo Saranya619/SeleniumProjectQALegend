@@ -1,4 +1,4 @@
-package baseClass;
+package testClasses;
 
 import org.testng.Assert; 
 import org.testng.annotations.Test;
