@@ -1,31 +1,36 @@
 package testClasses;
 
-import org.testng.Assert;   
+import java.io.IOException;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import baseClass.BaseClass;
 import pageClasses.HomePageClass;
 import pageClasses.LoginPageClass;
 import pageClasses.ResetPasswordPageClass;
+import utilities.ExcelReadUtility;
 
 public class LoginTest extends BaseClass {
 	LoginPageClass lp;
 	HomePageClass hp;
 	ResetPasswordPageClass rp;
+	
 
 	@Test
-	public void verify_valid_login() {
+	public void verify_valid_login() throws IOException {
 		lp = new LoginPageClass(driver);
-		hp = lp.validLogin("admin", "123456");
+		hp = lp.validLogin(ExcelReadUtility.getStringData(0, 0, "loginData"), ExcelReadUtility.getIntegerData(0, 1, "loginData"));
 		hp.clickOnEndTourButton();
 		String actualResult = hp.getTextOfWelcomeHeading();
 		Assert.assertTrue(actualResult.contains("Welcome admin,"));
 	}
 
 	@Test
-	public void verify_invalid_login() {
+	public void verify_invalid_login() throws IOException {
 		lp = new LoginPageClass(driver);
-		lp = lp.invalidLogin("admin", "password");
+		
+		lp = lp.invalidLogin(ExcelReadUtility.getStringData(1, 0, "loginData"), ExcelReadUtility.getIntegerData(1, 1, "loginData"));
 		String actualResult = lp.getTextOfInvalidErrorMsg();
 		Assert.assertTrue(actualResult.contains("These credentials do not match our records."));
 	}

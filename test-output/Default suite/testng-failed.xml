@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testClasses.HomeTest">
+      <class name="testClasses.UserManagementTest">
         <methods>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="verify_tooltip_of_calculator_icon"/>
+          <include name="verify_add_and_search_user"/>
         </methods>
-      </class> <!-- testClasses.HomeTest -->
+      </class> <!-- testClasses.UserManagementTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

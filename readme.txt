@@ -1,0 +1,12 @@
+src/main/java
+	-pageclasses
+	-utilities
+	-constants
+src/main/resources
+	-config.properties
+src/test/java
+	-baseClass
+	-testClasses
+src/test/resources
+	-testData.xlsx
+pom.xml

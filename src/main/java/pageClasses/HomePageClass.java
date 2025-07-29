@@ -26,6 +26,12 @@ public class HomePageClass {
 
 	@FindBy(id = "btnCalculator")
 	WebElement calculatorIcon;
+	
+	@FindBy(xpath = "//span[text()='User Management']")
+	WebElement userManagementMenu;
+	
+	@FindBy(xpath = "//a[@href='https://qalegend.com/billing/public/users']")
+	WebElement userMenu;
 
 	public void clickOnEndTourButton() {
 		try {
@@ -41,16 +47,26 @@ public class HomePageClass {
 			// e.printStackTrace();
 			e.getMessage();
 		}
-
 	}
 
 	public String getTextOfWelcomeHeading() {
 		wait.waitForElementTobeVisible(driver, welcomeHeading, 5);
 		return welcomeHeading.getText();
-
 	}
 
 	public String getToggleValueofCalculatorIcon(String attribute) {
 		return gl.get_attribute_of_element(calculatorIcon, attribute);
+	}
+	
+	public HomePageClass clickUserManagementMenu() {
+		wait.waitForElementToBeClickableByWebElement_Utility(driver, userManagementMenu, 5);
+		userManagementMenu.click();
+		return this;
+	}
+	
+	public UserManagementPageClass clickUserMenu() {
+		wait.waitForElementToBeClickableByWebElement_Utility(driver, userMenu, 5);
+		userMenu.click();
+		return new UserManagementPageClass(driver);
 	}
 }
