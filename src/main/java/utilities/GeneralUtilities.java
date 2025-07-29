@@ -3,6 +3,8 @@ package utilities;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -77,6 +79,15 @@ public class GeneralUtilities {
 		return select.getOptions().stream().map(WebElement::getText).collect(Collectors.toList());
 
 	}
+	
+	public List<String> getAllOptions_From_CustomDropdown(WebElement containerElement) {
+	    List<WebElement> items = containerElement.findElements(By.tagName("li"));
+	    return items.stream()
+	                .map(WebElement::getText)
+	                .map(String::trim)
+	                .collect(Collectors.toList());
+	}
+
 
 	// to get the name of all values from the drop down
 	public List<String> getAllSelectedOptions_From_Dropdown(WebElement element) {

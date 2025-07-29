@@ -7,7 +7,7 @@
         <methods>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="verify_add_and_search_user"/>
+          <include name="verify_the_options_inside_action_button"/>
         </methods>
       </class> <!-- testClasses.UserManagementTest -->
     </classes>

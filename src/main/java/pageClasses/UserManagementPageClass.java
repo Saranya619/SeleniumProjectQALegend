@@ -1,5 +1,7 @@
 package pageClasses;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -46,6 +48,12 @@ public class UserManagementPageClass {
 
 	@FindBy(xpath = "//input[@type='search']")
 	WebElement searchbar;
+	
+	@FindBy(xpath = "//a[contains(@class,'btn buttons-collection')]")
+	WebElement actionButton;
+	
+	@FindBy(xpath = "//ul[@role='menu']")
+	WebElement actionOptions;
 
 	public String getUsersPageHeading() {
 		wait.waitForElementToBeClickableByWebElement_Utility(driver, usersHeading, 5);
@@ -56,7 +64,6 @@ public class UserManagementPageClass {
 		wait.waitForElementTobeVisible(driver, addButton, 10);
 		addButton.click();
 		return this;
-
 	}
 
 	public UserManagementPageClass addUser(String fnmae, String mail_id, String pwd, String cpwd) {
@@ -84,5 +91,15 @@ public class UserManagementPageClass {
 				By.xpath("//a[(text())='Next']"));
 		return searchResult;
 	}
-
+	
+	public UserManagementPageClass clickActionHamburgerMenu() {
+		actionButton.click();
+		return this;
+	}
+	
+	public List<String> isActionOptionsPresent() {
+		  return gl.getAllOptions_From_CustomDropdown(actionOptions);
+	}
+	
+	
 }

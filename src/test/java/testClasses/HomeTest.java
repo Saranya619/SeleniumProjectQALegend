@@ -27,9 +27,3 @@ public class HomeTest extends BaseClass {
 	
 
 }
-
-//UserManagementpage -> test case verify to add a new user
-
-//homepage -> click usermanagement and users 
-
-//verify table contains added value using contains

@@ -32,6 +32,13 @@ public class HomePageClass {
 	
 	@FindBy(xpath = "//a[@href='https://qalegend.com/billing/public/users']")
 	WebElement userMenu;
+	
+	@FindBy(xpath = "//span[text()='Purchases']")
+	WebElement purchaseMenu;
+	
+	@FindBy(xpath = "//a[@href='https://qalegend.com/billing/public/purchases']")
+	WebElement listPurchasesMenu;
+	
 
 	public void clickOnEndTourButton() {
 		try {
@@ -69,4 +76,17 @@ public class HomePageClass {
 		userMenu.click();
 		return new UserManagementPageClass(driver);
 	}
+	
+	public HomePageClass clickPurchases() {
+		wait.waitForElementToBeClickableByWebElement_Utility(driver, purchaseMenu, 10);
+		purchaseMenu.click();
+		return this;
+	}
+	
+	public ListPurchasePageClass clicklistPurchasesMenu() {
+		wait.waitForElementToBeClickableByWebElement_Utility(driver, listPurchasesMenu, 5);
+		listPurchasesMenu.click();
+		return new ListPurchasePageClass(driver);
+	}
+	
 }
