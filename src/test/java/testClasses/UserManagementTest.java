@@ -33,7 +33,7 @@ public class UserManagementTest extends BaseClass {
 	}
 
 	@Test
-	public void verify_add_and_search_user() throws IOException {
+	public void verify_create_a_new_user_and_search() throws IOException {
 		lp = new LoginPageClass(driver);
 		hp = lp.validLogin(ExcelReadUtility.getStringData(0, 0, "loginData"),
 				ExcelReadUtility.getIntegerData(0, 1, "loginData"));
@@ -49,7 +49,7 @@ public class UserManagementTest extends BaseClass {
 	}
 
 	@Test
-	public void verify_add_and_search_from_table() throws IOException {
+	public void verify_add_and_search_from_paginated_table() throws IOException {
 		lp = new LoginPageClass(driver);
 		hp = lp.validLogin(ExcelReadUtility.getStringData(0, 0, "loginData"),
 				ExcelReadUtility.getIntegerData(0, 1, "loginData"));

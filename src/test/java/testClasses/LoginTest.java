@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import baseClass.BaseClass;
+import dataProvider.DataProviderClass;
 import pageClasses.HomePageClass;
 import pageClasses.LoginPageClass;
 import pageClasses.ResetPasswordPageClass;
@@ -17,20 +18,20 @@ public class LoginTest extends BaseClass {
 	ResetPasswordPageClass rp;
 	
 
-	@Test
-	public void verify_valid_login() throws IOException {
+	@Test(dataProviderClass = DataProviderClass.class,dataProvider = "successfulLogin")
+	public void verify_valid_login(String uname, String pass) throws IOException {
 		lp = new LoginPageClass(driver);
-		hp = lp.validLogin(ExcelReadUtility.getStringData(0, 0, "loginData"), ExcelReadUtility.getIntegerData(0, 1, "loginData"));
+		//hp = lp.validLogin(ExcelReadUtility.getStringData(0, 0, "loginData"), ExcelReadUtility.getIntegerData(0, 1, "loginData"));
+		hp = lp.validLogin(uname, pass);
 		hp.clickOnEndTourButton();
 		String actualResult = hp.getTextOfWelcomeHeading();
-		Assert.assertTrue(actualResult.contains("Welcome admin,"));
+		Assert.assertTrue(actualResult.contains(ExcelReadUtility.getStringData(5, 0, "loginData")));
 	}
 
-	@Test
-	public void verify_invalid_login() throws IOException {
+	@Test(dataProviderClass = DataProviderClass.class,dataProvider = "unsuccessfulLogin")
+	public void verify_invalid_login(String uname, String pass) throws IOException {
 		lp = new LoginPageClass(driver);
-		
-		lp = lp.invalidLogin(ExcelReadUtility.getStringData(1, 0, "loginData"), ExcelReadUtility.getIntegerData(1, 1, "loginData"));
+		lp = lp.invalidLogin(uname, pass);
 		String actualResult = lp.getTextOfInvalidErrorMsg();
 		Assert.assertTrue(actualResult.contains("These credentials do not match our records."));
 	}

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testClasses.UserManagementTest">
+      <class name="testClasses.ListPurchaseTest">
         <methods>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="verify_the_options_inside_action_button"/>
+          <include name="verify_list_purchase_page_navigation"/>
         </methods>
-      </class> <!-- testClasses.UserManagementTest -->
+      </class> <!-- testClasses.ListPurchaseTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
