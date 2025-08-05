@@ -35,7 +35,6 @@ public class GeneralUtilities {
 		boolean statusOfWebElement = element.isSelected();
 		return statusOfWebElement;
 	}
-	
 
 	public boolean is_multiple_dropdown(WebElement dropdownElement) {
 		Select sel = new Select(dropdownElement);
@@ -79,15 +78,22 @@ public class GeneralUtilities {
 		return select.getOptions().stream().map(WebElement::getText).collect(Collectors.toList());
 
 	}
-	
-	public List<String> getAllOptions_From_CustomDropdown(WebElement containerElement) {
-	    List<WebElement> items = containerElement.findElements(By.tagName("li"));
-	    return items.stream()
-	                .map(WebElement::getText)
-	                .map(String::trim)
-	                .collect(Collectors.toList());
+
+	// Get All options from the list
+	public List<String> getAllOptions_From_CustomDropdown(List<WebElement> containerElements) {
+		List<String> allOptions = new ArrayList<>();
+
+		for (WebElement container : containerElements) {
+			List<WebElement> items = container.findElements(By.tagName("li"));
+			for (WebElement item : items) {
+				allOptions.add(item.getText().trim());
+			}
+		}
+
+		return allOptions;
 	}
 
+	
 
 	// to get the name of all values from the drop down
 	public List<String> getAllSelectedOptions_From_Dropdown(WebElement element) {

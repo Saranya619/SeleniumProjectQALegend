@@ -1,0 +1,28 @@
+<suite thread-count="2" parallel="tests" name="Suite">
+	<listeners>
+		<listner class-name="listeners.RetryListener" />
+		<listner class-name=" listener.TestListener" />
+	</listeners>
+	<test thread-count="2" parallel="tests" name="Test">
+		<parameter name="Browser" value="Chrome">
+		</parameter>
+		<groups>
+			<run>
+				<include name="tearup"></include>
+				<exclude name="group1"></exclude>
+				<include name="group2"></include>
+				<include name="tearDown"></include>
+
+			</run>
+		</groups>
+		<classes>
+			<class name="testClasses.LoginTest" />
+			<!--<class name="testClasses.UserManagementTest" />
+			<class name="testClasses.HomeTest" />
+			<class name="testClasses.ListPurchaseTest" />-->
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->
+

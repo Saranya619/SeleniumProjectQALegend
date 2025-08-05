@@ -53,7 +53,7 @@ public class UserManagementPageClass {
 	WebElement actionButton;
 	
 	@FindBy(xpath = "//ul[@role='menu']")
-	WebElement actionOptions;
+	 List<WebElement> actionOptions;
 
 	public String getUsersPageHeading() {
 		wait.waitForElementToBeClickableByWebElement_Utility(driver, usersHeading, 5);

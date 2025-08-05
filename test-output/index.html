@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" panel-name="suite-CrossBrowserTestSuite" class="navigator-link">
+              <span class="suite-name border-failed">CrossBrowserTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-CrossBrowserTestSuite" class="navigator-link ">
+                    <span>crossBrowser.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                  <a href="#" panel-name="testlist-CrossBrowserTestSuite" class="navigator-link ">
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
-                    <span>0 groups</span>
+                  <a href="#" panel-name="group-CrossBrowserTestSuite" class="navigator-link ">
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="times-CrossBrowserTestSuite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-CrossBrowserTestSuite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-CrossBrowserTestSuite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-CrossBrowserTestSuite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,21 +92,144 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">22 methods, 2 failed,  6 skipped,  14 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-CrossBrowserTestSuite" class="hide-methods failed suite-CrossBrowserTestSuite"> (hide)</a> <!-- hide-methods failed suite-CrossBrowserTestSuite -->
+                      <a href="#" panel-name="suite-CrossBrowserTestSuite" class="show-methods failed suite-CrossBrowserTestSuite"> (show)</a> <!-- show-methods failed suite-CrossBrowserTestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-CrossBrowserTestSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_valid_login(admin, 123456)">verify_valid_login(admin, 123456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_valid_login(admin, 123456)">verify_valid_login(admin, 123456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-CrossBrowserTestSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-CrossBrowserTestSuite" class="hide-methods skipped suite-CrossBrowserTestSuite"> (hide)</a> <!-- hide-methods skipped suite-CrossBrowserTestSuite -->
+                      <a href="#" panel-name="suite-CrossBrowserTestSuite" class="show-methods skipped suite-CrossBrowserTestSuite"> (show)</a> <!-- show-methods skipped suite-CrossBrowserTestSuite -->
+                    </span>
+                    <div class="method-list-content skipped suite-CrossBrowserTestSuite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_valid_login(admin, 123456)">verify_valid_login(admin, 123456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_valid_login(admin, 123456)">verify_valid_login(admin, 123456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_valid_login(admin, 123456)">verify_valid_login(admin, 123456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_valid_login(admin, 123456)">verify_valid_login(admin, 123456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_valid_login(admin, 123456)">verify_valid_login(admin, 123456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_valid_login(admin, 123456)">verify_valid_login(admin, 123456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-CrossBrowserTestSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-CrossBrowserTestSuite" class="hide-methods passed suite-CrossBrowserTestSuite"> (hide)</a> <!-- hide-methods passed suite-CrossBrowserTestSuite -->
+                      <a href="#" panel-name="suite-CrossBrowserTestSuite" class="show-methods passed suite-CrossBrowserTestSuite"> (show)</a> <!-- show-methods passed suite-CrossBrowserTestSuite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-CrossBrowserTestSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="testClasses.ListPurchaseTest" class="method navigator-link" hash-for-method="verify_list_purchase_page_navigation">verify_list_purchase_page_navigation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_Correct_Application_Is_Launching_While_Hitting_The_URL">verify_Correct_Application_Is_Launching_While_Hitting_The_URL</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_Correct_Application_Is_Launching_While_Hitting_The_URL">verify_Correct_Application_Is_Launching_While_Hitting_The_URL</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_UserNameTextBox_Showing_Hint_or_not">verify_UserNameTextBox_Showing_Hint_or_not</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_UserNameTextBox_Showing_Hint_or_not">verify_UserNameTextBox_Showing_Hint_or_not</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_invalid_login(admin, 809897)">verify_invalid_login(admin, 809897)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_invalid_login(saranya, 1234)">verify_invalid_login(saranya, 1234)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_invalid_login(saranya, 123456)">verify_invalid_login(saranya, 123456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_invalid_login(saranya, 1234)">verify_invalid_login(saranya, 1234)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_invalid_login(saranya, 123456)">verify_invalid_login(saranya, 123456)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_invalid_login(admin, 809897)">verify_invalid_login(admin, 809897)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_the_RememberMe_checkbox_is_unchecked_by_default">verify_the_RememberMe_checkbox_is_unchecked_by_default</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_the_RememberMe_checkbox_is_unchecked_by_default">verify_the_RememberMe_checkbox_is_unchecked_by_default</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password">verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-CrossBrowserTestSuite" title="testClasses.LoginTest" class="method navigator-link" hash-for-method="verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password">verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-CrossBrowserTestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,133 +240,749 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-CrossBrowserTestSuite" class="panel CrossBrowserTestSuite">
+          <div class="suite-CrossBrowserTestSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testClasses.ListPurchaseTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">testClasses.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verify_list_purchase_page_navigation">
-                  </a> <!-- verify_list_purchase_page_navigation -->
-                  <span class="method-name">verify_list_purchase_page_navigation</span>
+                  <a name="verify_valid_login(admin, 123456)">
+                  </a> <!-- verify_valid_login(admin, 123456) -->
+                  <span class="method-name">verify_valid_login</span>
+                  <span class="parameters">(admin,123456)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
+	at utilities.ExcelReadUtility.getStringData(ExcelReadUtility.java:24)
+	at testClasses.LoginTest.verify_valid_login(LoginTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_valid_login(admin, 123456)">
+                  </a> <!-- verify_valid_login(admin, 123456) -->
+                  <span class="method-name">verify_valid_login</span>
+                  <span class="parameters">(admin,123456)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
+	at utilities.ExcelReadUtility.getStringData(ExcelReadUtility.java:24)
+	at testClasses.LoginTest.verify_valid_login(LoginTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-CrossBrowserTestSuite-class-failed -->
+          <div class="suite-CrossBrowserTestSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">testClasses.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_valid_login(admin, 123456)">
+                  </a> <!-- verify_valid_login(admin, 123456) -->
+                  <span class="method-name">verify_valid_login</span>
+                  <span class="parameters">(admin,123456)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
+	at utilities.ExcelReadUtility.getStringData(ExcelReadUtility.java:24)
+	at testClasses.LoginTest.verify_valid_login(LoginTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_valid_login(admin, 123456)">
+                  </a> <!-- verify_valid_login(admin, 123456) -->
+                  <span class="method-name">verify_valid_login</span>
+                  <span class="parameters">(admin,123456)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
+	at utilities.ExcelReadUtility.getStringData(ExcelReadUtility.java:24)
+	at testClasses.LoginTest.verify_valid_login(LoginTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_valid_login(admin, 123456)">
+                  </a> <!-- verify_valid_login(admin, 123456) -->
+                  <span class="method-name">verify_valid_login</span>
+                  <span class="parameters">(admin,123456)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
+	at utilities.ExcelReadUtility.getStringData(ExcelReadUtility.java:24)
+	at testClasses.LoginTest.verify_valid_login(LoginTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_valid_login(admin, 123456)">
+                  </a> <!-- verify_valid_login(admin, 123456) -->
+                  <span class="method-name">verify_valid_login</span>
+                  <span class="parameters">(admin,123456)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
+	at utilities.ExcelReadUtility.getStringData(ExcelReadUtility.java:24)
+	at testClasses.LoginTest.verify_valid_login(LoginTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_valid_login(admin, 123456)">
+                  </a> <!-- verify_valid_login(admin, 123456) -->
+                  <span class="method-name">verify_valid_login</span>
+                  <span class="parameters">(admin,123456)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
+	at utilities.ExcelReadUtility.getStringData(ExcelReadUtility.java:24)
+	at testClasses.LoginTest.verify_valid_login(LoginTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_valid_login(admin, 123456)">
+                  </a> <!-- verify_valid_login(admin, 123456) -->
+                  <span class="method-name">verify_valid_login</span>
+                  <span class="parameters">(admin,123456)</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFRow.getCell(int)&quot; because &quot;r&quot; is null
+	at utilities.ExcelReadUtility.getStringData(ExcelReadUtility.java:24)
+	at testClasses.LoginTest.verify_valid_login(LoginTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CrossBrowserTestSuite-class-skipped -->
+          <div class="suite-CrossBrowserTestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testClasses.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_Correct_Application_Is_Launching_While_Hitting_The_URL">
+                  </a> <!-- verify_Correct_Application_Is_Launching_While_Hitting_The_URL -->
+                  <span class="method-name">verify_Correct_Application_Is_Launching_While_Hitting_The_URL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_Correct_Application_Is_Launching_While_Hitting_The_URL">
+                  </a> <!-- verify_Correct_Application_Is_Launching_While_Hitting_The_URL -->
+                  <span class="method-name">verify_Correct_Application_Is_Launching_While_Hitting_The_URL</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_UserNameTextBox_Showing_Hint_or_not">
+                  </a> <!-- verify_UserNameTextBox_Showing_Hint_or_not -->
+                  <span class="method-name">verify_UserNameTextBox_Showing_Hint_or_not</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_UserNameTextBox_Showing_Hint_or_not">
+                  </a> <!-- verify_UserNameTextBox_Showing_Hint_or_not -->
+                  <span class="method-name">verify_UserNameTextBox_Showing_Hint_or_not</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_invalid_login(admin, 809897)">
+                  </a> <!-- verify_invalid_login(admin, 809897) -->
+                  <span class="method-name">verify_invalid_login</span>
+                  <span class="parameters">(admin,809897)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_invalid_login(saranya, 1234)">
+                  </a> <!-- verify_invalid_login(saranya, 1234) -->
+                  <span class="method-name">verify_invalid_login</span>
+                  <span class="parameters">(saranya,1234)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_invalid_login(saranya, 123456)">
+                  </a> <!-- verify_invalid_login(saranya, 123456) -->
+                  <span class="method-name">verify_invalid_login</span>
+                  <span class="parameters">(saranya,123456)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_invalid_login(saranya, 1234)">
+                  </a> <!-- verify_invalid_login(saranya, 1234) -->
+                  <span class="method-name">verify_invalid_login</span>
+                  <span class="parameters">(saranya,1234)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_invalid_login(saranya, 123456)">
+                  </a> <!-- verify_invalid_login(saranya, 123456) -->
+                  <span class="method-name">verify_invalid_login</span>
+                  <span class="parameters">(saranya,123456)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_invalid_login(admin, 809897)">
+                  </a> <!-- verify_invalid_login(admin, 809897) -->
+                  <span class="method-name">verify_invalid_login</span>
+                  <span class="parameters">(admin,809897)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_the_RememberMe_checkbox_is_unchecked_by_default">
+                  </a> <!-- verify_the_RememberMe_checkbox_is_unchecked_by_default -->
+                  <span class="method-name">verify_the_RememberMe_checkbox_is_unchecked_by_default</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_the_RememberMe_checkbox_is_unchecked_by_default">
+                  </a> <!-- verify_the_RememberMe_checkbox_is_unchecked_by_default -->
+                  <span class="method-name">verify_the_RememberMe_checkbox_is_unchecked_by_default</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password">
+                  </a> <!-- verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password -->
+                  <span class="method-name">verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password">
+                  </a> <!-- verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password -->
+                  <span class="method-name">verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-CrossBrowserTestSuite-class-passed -->
+        </div> <!-- panel CrossBrowserTestSuite -->
+        <div panel-name="test-xml-CrossBrowserTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse--937808577/testng-customsuite.xml</span>
+            <span class="header-content">/home/saranyamanikandan/Pictures/selenium-basics/com.QALegend/crossBrowser.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+&lt;suite name=&quot;CrossBrowserTestSuite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;listeners.RetryListener&quot;/&gt;
+    &lt;listener class-name=&quot;listeners.TestListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;ChromeTest&quot;&gt;
+    &lt;parameter name=&quot;Browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testClasses.ListPurchaseTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;verify_list_purchase_page_navigation&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testClasses.ListPurchaseTest --&gt;
+      &lt;class name=&quot;testClasses.LoginTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- ChromeTest --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;FirefoxTest&quot;&gt;
+    &lt;parameter name=&quot;Browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testClasses.LoginTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FirefoxTest --&gt;
+&lt;/suite&gt; &lt;!-- CrossBrowserTestSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-CrossBrowserTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for CrossBrowserTestSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">ChromeTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FirefoxTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-CrossBrowserTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for CrossBrowserTestSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">group1</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verify_Correct_Application_Is_Launching_While_Hitting_The_URL</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verify_UserNameTextBox_Showing_Hint_or_not</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">group2</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verify_the_RememberMe_checkbox_is_unchecked_by_default</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-CrossBrowserTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for CrossBrowserTestSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_CrossBrowserTestSuite');
+function tableData_CrossBrowserTestSuite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(22);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verify_list_purchase_page_navigation')
-data.setCell(0, 2, 'testClasses.ListPurchaseTest')
-data.setCell(0, 3, 7500);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 1, 'verify_valid_login')
+data.setCell(0, 2, 'testClasses.LoginTest')
+data.setCell(0, 3, 4844);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verify_valid_login')
+data.setCell(1, 2, 'testClasses.LoginTest')
+data.setCell(1, 3, 4790);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verify_valid_login')
+data.setCell(2, 2, 'testClasses.LoginTest')
+data.setCell(2, 3, 4778);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verify_valid_login')
+data.setCell(3, 2, 'testClasses.LoginTest')
+data.setCell(3, 3, 4647);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verify_valid_login')
+data.setCell(4, 2, 'testClasses.LoginTest')
+data.setCell(4, 3, 3728);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verify_valid_login')
+data.setCell(5, 2, 'testClasses.LoginTest')
+data.setCell(5, 3, 3426);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verify_valid_login')
+data.setCell(6, 2, 'testClasses.LoginTest')
+data.setCell(6, 3, 3357);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'verify_valid_login')
+data.setCell(7, 2, 'testClasses.LoginTest')
+data.setCell(7, 3, 3254);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'verify_invalid_login')
+data.setCell(8, 2, 'testClasses.LoginTest')
+data.setCell(8, 3, 863);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'verify_invalid_login')
+data.setCell(9, 2, 'testClasses.LoginTest')
+data.setCell(9, 3, 854);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'verify_invalid_login')
+data.setCell(10, 2, 'testClasses.LoginTest')
+data.setCell(10, 3, 842);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verify_invalid_login')
+data.setCell(11, 2, 'testClasses.LoginTest')
+data.setCell(11, 3, 709);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verify_invalid_login')
+data.setCell(12, 2, 'testClasses.LoginTest')
+data.setCell(12, 3, 698);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'verify_invalid_login')
+data.setCell(13, 2, 'testClasses.LoginTest')
+data.setCell(13, 3, 664);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password')
+data.setCell(14, 2, 'testClasses.LoginTest')
+data.setCell(14, 3, 632);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password')
+data.setCell(15, 2, 'testClasses.LoginTest')
+data.setCell(15, 3, 430);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verify_UserNameTextBox_Showing_Hint_or_not')
+data.setCell(16, 2, 'testClasses.LoginTest')
+data.setCell(16, 3, 78);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'verify_the_RememberMe_checkbox_is_unchecked_by_default')
+data.setCell(17, 2, 'testClasses.LoginTest')
+data.setCell(17, 3, 32);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verify_Correct_Application_Is_Launching_While_Hitting_The_URL')
+data.setCell(18, 2, 'testClasses.LoginTest')
+data.setCell(18, 3, 27);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'verify_UserNameTextBox_Showing_Hint_or_not')
+data.setCell(19, 2, 'testClasses.LoginTest')
+data.setCell(19, 3, 26);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'verify_the_RememberMe_checkbox_is_unchecked_by_default')
+data.setCell(20, 2, 'testClasses.LoginTest')
+data.setCell(20, 3, 22);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'verify_Correct_Application_Is_Launching_While_Hitting_The_URL')
+data.setCell(21, 2, 'testClasses.LoginTest')
+data.setCell(21, 3, 6);
+window.suiteTableData['CrossBrowserTestSuite']= { tableData: data, tableDiv: 'times-div-CrossBrowserTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 38 seconds</span>
+              <div id="times-div-CrossBrowserTestSuite">
+              </div> <!-- times-div-CrossBrowserTestSuite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-CrossBrowserTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for CrossBrowserTestSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-CrossBrowserTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testClasses.ListPurchaseTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verify_purchase_status_dropdownValues</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-CrossBrowserTestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testClasses.ListPurchaseTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
+              <div class="chronological-class-name">testClasses.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">environmentVerify</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-test before">
+                <span class="method-name">dbConnection</span>
+                <span class="method-start">14 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">35 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verify_list_purchase_page_navigation</span>
-                <span class="method-start">2375 ms</span>
+                <span class="method-name">verify_Correct_Application_Is_Launching_While_Hitting_The_URL</span>
+                <span class="method-start">1641 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">9879 ms</span>
+                <span class="method-start">1671 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">1759 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_UserNameTextBox_Showing_Hint_or_not</span>
+                <span class="method-start">2824 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">2851 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">3631 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_invalid_login(saranya, 1234)</span>
+                <span class="method-start">4795 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">5462 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">5537 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_invalid_login(admin, 809897)</span>
+                <span class="method-start">6619 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">7330 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">7407 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_invalid_login(saranya, 123456)</span>
+                <span class="method-start">8501 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">9200 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">9278 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_the_RememberMe_checkbox_is_unchecked_by_default</span>
+                <span class="method-start">10423 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">10446 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">10521 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password</span>
+                <span class="method-start">11672 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">12104 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">12248 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_valid_login(admin, 123456)</span>
+                <span class="method-start">13364 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">17099 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">17175 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_valid_login(admin, 123456)</span>
+                <span class="method-start">18367 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">21727 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">21806 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_valid_login(admin, 123456)</span>
+                <span class="method-start">22904 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">26160 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(Chrome)</span>
+                <span class="method-start">26241 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verify_valid_login(admin, 123456)</span>
+                <span class="method-start">27491 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">31054 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">dbterminate</span>
+                <span class="method-start">31134 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-test before">
+                <span class="method-name">dbConnection</span>
+                <span class="method-start">31395 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefox)</span>
+                <span class="method-start">31396 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_Correct_Application_Is_Launching_While_Hitting_The_URL</span>
+                <span class="method-start">35249 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">35257 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefox)</span>
+                <span class="method-start">36118 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_UserNameTextBox_Showing_Hint_or_not</span>
+                <span class="method-start">39889 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">39969 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefox)</span>
+                <span class="method-start">40972 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_invalid_login(saranya, 1234)</span>
+                <span class="method-start">44651 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">45506 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefox)</span>
+                <span class="method-start">46359 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_invalid_login(admin, 809897)</span>
+                <span class="method-start">50168 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">51011 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefox)</span>
+                <span class="method-start">51830 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_invalid_login(saranya, 123456)</span>
+                <span class="method-start">55605 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">56469 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefox)</span>
+                <span class="method-start">57301 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_the_RememberMe_checkbox_is_unchecked_by_default</span>
+                <span class="method-start">61232 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">61265 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefox)</span>
+                <span class="method-start">62115 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_the_reset_password_page_is_redirecting_while_clicking_on_Forgot_your_password</span>
+                <span class="method-start">65852 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">66485 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefox)</span>
+                <span class="method-start">67354 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_valid_login(admin, 123456)</span>
+                <span class="method-start">71251 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">75900 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefox)</span>
+                <span class="method-start">76785 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_valid_login(admin, 123456)</span>
+                <span class="method-start">80798 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">85580 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefox)</span>
+                <span class="method-start">86442 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verify_valid_login(admin, 123456)</span>
+                <span class="method-start">92795 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">97642 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(firefox)</span>
+                <span class="method-start">98582 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verify_valid_login(admin, 123456)</span>
+                <span class="method-start">102458 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">107388 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">dbterminate</span>
+                <span class="method-start">108263 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-suite after">
+                <span class="method-name">environmentClose</span>
+                <span class="method-start">108316 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -1,6 +1,6 @@
 package testClasses;
 
-import java.io.IOException; 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,6 +12,7 @@ import pageClasses.HomePageClass;
 import pageClasses.LoginPageClass;
 import pageClasses.UserManagementPageClass;
 import utilities.ExcelReadUtility;
+import utilities.RandomDataGeneration;
 
 public class UserManagementTest extends BaseClass {
 
@@ -43,8 +44,11 @@ public class UserManagementTest extends BaseClass {
 		um = hp.clickUserMenu();
 
 		um = um.clickAddButton();
-		um.addUser("Diya", "Diyaninnan+1@gmail.com", "diya231", "diya231");
-		boolean searchStatus = um.searchAnUser("Diya");
+		String name = RandomDataGeneration.getFirstName();
+		String password = RandomDataGeneration.getPasword();
+		
+		um.addUser(name, RandomDataGeneration.getEmail(), password, password);
+		boolean searchStatus = um.searchAnUser(name);
 		Assert.assertEquals(searchStatus, true, "User not found!!!!");
 	}
 
@@ -59,9 +63,12 @@ public class UserManagementTest extends BaseClass {
 		um = hp.clickUserMenu();
 
 		um = um.clickAddButton();
-		um.addUser("Darwin", "darwin2011@gmail.com", "sara123", "sara123");
+		
+		String password = RandomDataGeneration.getPasword();
+		String email  = RandomDataGeneration.getEmail();
+		um.addUser(RandomDataGeneration.getFirstName(), email, password, password);
 
-		String expectedResult = "darwin2011@gmail.com";
+		String expectedResult = email;
 		boolean actualResult = um.isUserPresent(expectedResult);
 		System.out.println("Expected EmailID:" + expectedResult + "ActualEmail:" + actualResult);
 		Assert.assertTrue(actualResult, "****User not found in the table**!!!!");

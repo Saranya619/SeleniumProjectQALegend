@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [CrossBrowserTestSuite]">
+  <listeners>
+    <listener class-name="listeners.RetryListener"/>
+    <listener class-name="listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="ChromeTest(failed)">
+    <parameter name="Browser" value="Chrome"/>
     <classes>
-      <class name="testClasses.ListPurchaseTest">
+      <class name="testClasses.LoginTest">
         <methods>
+          <include name="verify_valid_login" invocation-numbers="0"/>
           <include name="afterMethod"/>
+          <include name="environmentClose"/>
           <include name="beforeMethod"/>
-          <include name="verify_list_purchase_page_navigation"/>
+          <include name="dbterminate"/>
+          <include name="dbConnection"/>
+          <include name="environmentVerify"/>
         </methods>
-      </class> <!-- testClasses.ListPurchaseTest -->
+      </class> <!-- testClasses.LoginTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="5" name="FirefoxTest(failed)">
+    <parameter name="Browser" value="firefox"/>
+    <classes>
+      <class name="testClasses.LoginTest">
+        <methods>
+          <include name="verify_valid_login" invocation-numbers="0"/>
+          <include name="afterMethod"/>
+          <include name="environmentClose"/>
+          <include name="beforeMethod"/>
+          <include name="dbterminate"/>
+          <include name="dbConnection"/>
+          <include name="environmentVerify"/>
+        </methods>
+      </class> <!-- testClasses.LoginTest -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [CrossBrowserTestSuite] -->
