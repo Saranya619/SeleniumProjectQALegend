@@ -35,6 +35,7 @@ public class BaseClass {
 
 	/**
 	 * Initializes WebDriver instance based on the specified browser name.
+	 * 
 	 * @param browserName Name of the browser (e.g., Chrome, Firefox)
 	 */
 
@@ -43,13 +44,13 @@ public class BaseClass {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--headless");
 			driver = new ChromeDriver(options);
-			
-		} else if (browserName.equalsIgnoreCase("Firefox")) {
+			// driver = new ChromeDriver();
 
-//			FirefoxOptions options = new FirefoxOptions();
-//			options.addArguments("-headless");
-			/* driver = new FirefoxDriver(options); */
-			driver = new FirefoxDriver();
+		} else if (browserName.equalsIgnoreCase("Firefox")) {
+			FirefoxOptions options = new FirefoxOptions();
+			options.addArguments("-headless");
+			driver = new FirefoxDriver(options);
+//		driver = new FirefoxDriver();
 
 		} else {
 			throw new IllegalArgumentException("Unsupported browser!!!" + browserName);
@@ -92,7 +93,7 @@ public class BaseClass {
 	public void afterMethod() {
 		System.out.println("Closing browser.....");
 		driver.quit();
-		System.out.println("Test execution completed.");
+
 	}
 
 }

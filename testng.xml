@@ -1,4 +1,4 @@
-<suite thread-count="2" parallel="tests" name="Suite">
+<suite thread-count="2" parallel="tests" name="groupingSuite">
 	<listeners>
 		<listner class-name="listeners.RetryListener" />
 		<listner class-name=" listener.TestListener" />

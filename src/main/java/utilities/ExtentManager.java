@@ -32,11 +32,14 @@ public class ExtentManager {
         htmlReporter.config().setTheme(Theme.STANDARD);
         htmlReporter.config().setDocumentTitle("Automation Test Report");
         htmlReporter.config().setEncoding("utf-8");
-        htmlReporter.config().setReportName("Test Execution Report");
-
+        htmlReporter.config().setReportName("Functional Test Execution Summary");
+        htmlReporter.config().setTimelineEnabled(true);  
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-
+        extent.setSystemInfo("OS", System.getProperty("os.name"));
+        extent.setSystemInfo("User", System.getProperty("user.name"));
+        extent.setSystemInfo("Java Version", System.getProperty("java.version"));
+        extent.setSystemInfo("Environment", "QA");
         return extent;
     }
 

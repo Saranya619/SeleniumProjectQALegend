@@ -1,14 +1,10 @@
 package testClasses;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import baseClass.BaseClass;
 import pageClasses.HomePageClass;
 import pageClasses.ListPurchasePageClass;
@@ -32,7 +28,7 @@ public class ListPurchaseTest extends BaseClass {
 		hp.clickPurchases();
 		lpurchase = hp.clicklistPurchasesMenu();
 		String actualResult = lpurchase.getPurchasesPageHeading();
-		AssertJUnit.assertEquals(actualResult, ExcelReadUtility.getStringData(0, 0, "listPurchaseData"));
+		Assert.assertEquals(actualResult, ExcelReadUtility.getStringData(0, 0, "listPurchaseData"));
 
 	}
 	@Test
@@ -45,7 +41,7 @@ public class ListPurchaseTest extends BaseClass {
 		lpurchase = hp.clicklistPurchasesMenu();
 		List<String> actualResult = lpurchase.getPurchaseStatusDropdownValues();
 		List<String> expectedResult = Arrays.asList("All", "Received", "Pending", "Ordered");
-		AssertJUnit.assertEquals(actualResult, expectedResult);
+		Assert.assertEquals(actualResult, expectedResult);
 
 	}
 
