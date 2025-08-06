@@ -3,13 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testClasses.UserManagementTest">
+      <class name="testClasses.LoginTest">
         <methods>
+          <include name="verify_valid_login"/>
           <include name="afterMethod"/>
+          <include name="environmentClose"/>
           <include name="beforeMethod"/>
-          <include name="verify_create_a_new_user_and_search"/>
+          <include name="dbterminate"/>
+          <include name="dbConnection"/>
+          <include name="environmentVerify"/>
         </methods>
-      </class> <!-- testClasses.UserManagementTest -->
+      </class> <!-- testClasses.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

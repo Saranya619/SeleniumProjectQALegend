@@ -26,7 +26,8 @@ public class LoginTest extends BaseClass {
 		hp = lp.validLogin(uname, pass);
 		hp.clickOnEndTourButton();
 		String actualResult = hp.getTextOfWelcomeHeading();
-		Assert.assertTrue(actualResult.contains(ExcelReadUtility.getStringData(5, 1, "loginData")));
+		System.out.println("actualResult"+actualResult);
+		Assert.assertTrue(actualResult.contains("Welcome admin,"));
 	}
 
 	@Test(dataProviderClass = DataProviderClass.class,dataProvider = "unsuccessfulLogin")

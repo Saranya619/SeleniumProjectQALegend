@@ -33,12 +33,7 @@ public class BaseClass {
 		prop.load(file);
 	}
 
-	/**
-	 * Initializes WebDriver instance based on the specified browser name.
-	 * 
-	 * @param browserName Name of the browser (e.g., Chrome, Firefox)
-	 */
-
+	
 	public static void browserIntialize(String browserName) throws Exception {
 		if (browserName.equalsIgnoreCase("Chrome")) {
 			ChromeOptions options = new ChromeOptions();
@@ -50,7 +45,7 @@ public class BaseClass {
 			FirefoxOptions options = new FirefoxOptions();
 			options.addArguments("-headless");
 			driver = new FirefoxDriver(options);
-//		driver = new FirefoxDriver();
+           //driver = new FirefoxDriver();
 
 		} else {
 			throw new IllegalArgumentException("Unsupported browser!!!" + browserName);
@@ -83,6 +78,7 @@ public class BaseClass {
 
 		loadProperties(); // call static method
 		browserIntialize(browser);
+		System.out.println("Browser received: " + browser);
 		driver.get(prop.getProperty("baseURL")); // read the property file
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Constants.implicitWaitTimeout));
