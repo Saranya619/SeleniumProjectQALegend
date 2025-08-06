@@ -27,7 +27,7 @@ public class LoginTest extends BaseClass {
 		hp.clickOnEndTourButton();
 		String actualResult = hp.getTextOfWelcomeHeading();
 		System.out.println("actualResult"+actualResult);
-		Assert.assertTrue(actualResult.contains("Welcome admin,"));
+		Assert.assertTrue(actualResult.contains("Welcome max,"));
 	}
 
 	@Test(dataProviderClass = DataProviderClass.class,dataProvider = "unsuccessfulLogin")
